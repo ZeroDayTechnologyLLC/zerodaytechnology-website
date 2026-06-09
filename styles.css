@@ -469,6 +469,7 @@ textarea {
 @media (max-width: 960px) {
     .hero-grid,
     .feature-grid,
+    .services-section .cards,
     .split-grid,
     .about-grid,
     .contact-grid {
