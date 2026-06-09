@@ -513,6 +513,99 @@ textarea {
         margin: 0;
         line-height: 1.75;
     }
+
+    .investor-hero {
+        padding-top: 3.5rem;
+        padding-bottom: 4rem;
+    }
+
+    .investor-hero .container {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .investor-hero .hero-copy {
+        max-width: 620px;
+    }
+
+    .investor-panel {
+        display: grid;
+        align-items: center;
+    }
+
+    .investor-panel .panel-card {
+        padding: 2rem;
+        border-radius: 2rem;
+        background: rgba(7, 15, 24, 0.98);
+    }
+
+    .investor-panel .panel-card h2 {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+
+    .investor-panel .panel-card ul {
+        list-style: none;
+        display: grid;
+        gap: 0.9rem;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .investor-panel .panel-card li {
+        position: relative;
+        padding-left: 1.4rem;
+        color: var(--text-muted);
+    }
+
+    .investor-panel .panel-card li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.55rem;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent), #00ffa6);
+    }
+
+    .investor-benefits .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .investor-benefits .feature-card {
+        min-height: 260px;
+        padding: 2rem;
+    }
+
+    .investor-benefits .feature-emphasis {
+        border-color: rgba(0, 255, 206, 0.28);
+    }
+
+    .investor-why {
+        margin-top: 2rem;
+    }
+
+    .investor-why .section-header {
+        margin-bottom: 1.75rem;
+    }
+
+    .why-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .why-grid .highlight-item {
+        min-height: 220px;
+        padding: 1.75rem;
+        background: rgba(12, 18, 30, 0.96);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 1.5rem;
+    }
+
 .footer-inner p {
     font-size: 0.95rem;
 }
@@ -547,7 +640,8 @@ textarea {
         justify-content: flex-start;
     }
 
-    .hero {
+    .hero,
+    .investor-hero {
         padding-top: 4rem;
     }
 
@@ -567,12 +661,15 @@ textarea {
     .feature-card,
     .split-card,
     .contact-card,
-    .highlight-item {
+    .highlight-item,
+    .pricing-card,
+    .investor-panel .panel-card {
         padding: 1.5rem;
     }
 
     .feature-card h2,
-    .split-card h2 {
+    .split-card h2,
+    .pricing-card h3 {
         font-size: 1.4rem;
     }
 
@@ -589,8 +686,15 @@ textarea {
     .services-section .cards,
     .about-highlights,
     .split-grid,
-    .contact-grid {
+    .contact-grid,
+    .pricing-grid,
+    .investor-benefits .feature-grid {
         gap: 1rem;
+    }
+
+    .investor-benefits .feature-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr;
     }
 }
 
