@@ -552,3 +552,5 @@ textarea {
         padding: 0.95rem 1.25rem;
     }
 }
+
+/* Trigger rebuild: small non-functional whitespace/comment change */
