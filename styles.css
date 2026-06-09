@@ -146,7 +146,6 @@ textarea {
     background: transparent;
     padding: 0;
     transition: transform 0.35s ease, filter 0.35s ease;
-    animation: floatLogo 9s ease-in-out infinite;
 }
 
 .brand-logo:hover {
@@ -287,7 +286,7 @@ textarea {
     background: rgba(14, 23, 38, 0.98);
     box-shadow: 0 28px 90px rgba(0, 0, 0, 0.22);
     backdrop-filter: blur(18px);
-        animation: floatUpDown 12s ease-in-out infinite;
+        /* floating removed per request */
     color: var(--text-muted);
     line-height: 1.85;
 }
@@ -664,15 +663,11 @@ textarea {
         background: rgba(12, 18, 30, 0.96);
         border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 1.5rem;
-        animation: floatUpDown 14s ease-in-out infinite;
+        /* floating removed */
     }
 
-    .hero-copy,
-    .investor-panel .panel-card,
-    .feature-card,
-    .pricing-card,
-    .card,
-    .highlight-item {
+    /* keep only the hero copy floating */
+    .hero-copy {
         animation: floatUpDown 12s ease-in-out infinite;
     }
 
