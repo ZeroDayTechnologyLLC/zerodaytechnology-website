@@ -291,7 +291,7 @@ textarea {
 }
 
 .cards-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .card,
@@ -448,20 +448,29 @@ textarea {
     word-break: break-all;
 }
 
-.site-footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 2rem 0 3rem;
-    color: #7e96b7;
-}
+    .pricing-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 2rem;
+        min-width: 320px;
+    }
 
-.footer-inner {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    align-items: center;
-    flex-wrap: wrap;
-}
+    .pricing-table th,
+    .pricing-table td {
+        padding: 1rem 1.2rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
 
+    .pricing-table th {
+        text-align: left;
+        background: rgba(255, 255, 255, 0.04);
+        color: #f8fbff;
+        letter-spacing: 0.02em;
+    }
+
+    .pricing-table tbody tr:hover {
+        background: rgba(255, 255, 255, 0.03);
+    }
 .footer-inner p {
     font-size: 0.95rem;
 }
