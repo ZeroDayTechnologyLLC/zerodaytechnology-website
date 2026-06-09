@@ -1,2 +1,0 @@
-# zerodaytechnology-website
-Website
