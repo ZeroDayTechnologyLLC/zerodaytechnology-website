@@ -730,7 +730,8 @@ textarea {
     .services-section .cards,
     .split-grid,
     .about-grid,
-    .contact-grid {
+    .contact-grid,
+    .investor-hero .container {
         grid-template-columns: 1fr;
     }
 
