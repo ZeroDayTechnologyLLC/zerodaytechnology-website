@@ -704,6 +704,21 @@ textarea {
         animation: pulseGlowSubtle 8s ease-in-out infinite !important;
     }
 
+    /* Neon outline for CTAs without pulsing */
+    .btn-neon {
+        animation: none !important;
+        border: 1px solid var(--accent-strong);
+        background: linear-gradient(180deg, rgba(0,255,206,0.04), rgba(0,255,206,0.01));
+        box-shadow: 0 0 20px rgba(0,255,206,0.22), 0 6px 28px rgba(0,255,206,0.06) inset;
+        color: #eafffb;
+        transition: box-shadow 180ms ease, transform 150ms ease, background 180ms ease;
+    }
+
+    .btn-neon:hover {
+        box-shadow: 0 0 30px rgba(0,255,206,0.32), 0 8px 36px rgba(0,255,206,0.08) inset;
+        transform: translateY(-2px);
+    }
+
     @keyframes aiPulse {
         0% { opacity: 0.85; transform: scale(0.995) translateY(0); filter: blur(6px) saturate(1.05); }
         50% { opacity: 1; transform: scale(1.06) translateY(-6px); filter: blur(2px) saturate(1.18); }
