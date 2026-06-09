@@ -200,5 +200,14 @@
         <p>Designed for government, enterprise, and high-security customers.</p>
     </div>
 </footer>
+<script>
+    // Trigger LED animation under header shortly after load
+    document.addEventListener('DOMContentLoaded', function() {
+        const header = document.querySelector('.site-header');
+        if (!header) return;
+        // small delay so header paints then animation starts
+        setTimeout(() => header.classList.add('led'), 220);
+    });
+</script>
 </body>
 </html>
