@@ -510,6 +510,36 @@ textarea {
     .hero-actions {
         flex-direction: column;
     }
+
+    .card,
+    .feature-card,
+    .split-card,
+    .contact-card,
+    .highlight-item {
+        padding: 1.5rem;
+    }
+
+    .feature-card h2,
+    .split-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .feature-card p,
+    .split-card p {
+        font-size: 0.95rem;
+    }
+
+    .feature-card ul,
+    .split-card ul {
+        gap: 0.7rem;
+    }
+
+    .services-section .cards,
+    .about-highlights,
+    .split-grid,
+    .contact-grid {
+        gap: 1rem;
+    }
 }
 
 @media (max-width: 520px) {
