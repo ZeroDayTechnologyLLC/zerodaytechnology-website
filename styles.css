@@ -811,6 +811,17 @@ textarea {
     .pricing-grid {
         grid-template-columns: 1fr;
     }
+
+    /* Prevent 'Why invest' cards from appearing stretched on small screens */
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+    }
+
+    .why-grid .highlight-item {
+        min-height: auto;
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 520px) {
