@@ -692,6 +692,17 @@ textarea {
         100% { box-shadow: 0 0 14px rgba(0, 255, 206, 0.18); }
     }
 
+    /* Subtle variant for important CTAs where pulsing should be minimal */
+    @keyframes pulseGlowSubtle {
+        0% { box-shadow: 0 0 6px rgba(0, 255, 206, 0.06); }
+        50% { box-shadow: 0 0 10px rgba(0, 255, 206, 0.08); }
+        100% { box-shadow: 0 0 6px rgba(0, 255, 206, 0.06); }
+    }
+
+    .btn-quiet {
+        animation: pulseGlowSubtle 8s ease-in-out infinite !important;
+    }
+
     @keyframes aiPulse {
         0% { opacity: 0.85; transform: scale(0.995) translateY(0); filter: blur(6px) saturate(1.05); }
         50% { opacity: 1; transform: scale(1.06) translateY(-6px); filter: blur(2px) saturate(1.18); }
