@@ -1,0 +1,473 @@
+:root {
+    color-scheme: dark;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    color: #dde7f1;
+    background-color: #05070f;
+    --surface: #0f172a;
+    --surface-2: #111827;
+    --surface-soft: rgba(20, 36, 64, 0.92);
+    --accent: #3dd5ff;
+    --accent-strong: #00ffce;
+    --text-muted: #9fb4c8;
+    --border: rgba(61, 213, 255, 0.14);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, rgba(61, 213, 255, 0.08), transparent 21%),
+        linear-gradient(180deg, #05070f 0%, #070a13 44%, #04050a 100%);
+    color: var(--text-muted);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+.container {
+    width: min(1120px, calc(100% - 2rem));
+    margin: 0 auto;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(16px);
+    background: rgba(5, 7, 15, 0.88);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.brand-mark {
+    width: 3rem;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    border-radius: 0.95rem;
+    background: linear-gradient(135deg, var(--accent), #00ffa6);
+    color: #05070f;
+    font-weight: 800;
+    font-size: 1.05rem;
+    letter-spacing: 0.1em;
+}
+
+.brand-name {
+    font-weight: 700;
+    color: #f8fbff;
+    letter-spacing: 0.02em;
+}
+
+.brand-tag {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+}
+
+.nav-menu a {
+    color: #c9d6e8;
+    font-size: 0.96rem;
+    transition: color 200ms ease;
+}
+
+.nav-menu a:hover {
+    color: var(--accent);
+}
+
+.hero {
+    padding: 5.5rem 0 4rem;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.hero-copy {
+    max-width: 640px;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.hero h1,
+.section-header h2,
+.feature-card h2,
+.about-section h2,
+.contact-section h2 {
+    color: #f8fbff;
+    line-height: 1.05;
+}
+
+.hero h1 {
+    font-size: clamp(2.6rem, 5vw, 4.6rem);
+    letter-spacing: -0.04em;
+    margin-bottom: 1.25rem;
+}
+
+.hero-text,
+.mission-panel p,
+.feature-card p,
+.about-grid p,
+.contact-grid p,
+.card p,
+.highlight-item p,
+.contact-card a {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.25rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 1rem 1.8rem;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: transform 200ms ease, background 200ms ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent), #0fffe3);
+    color: #05070f;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: #f8fbff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-panel {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.panel-card {
+    padding: 2rem;
+    border: 1px solid rgba(61, 213, 255, 0.14);
+    border-radius: 1.5rem;
+    background: rgba(15, 23, 42, 0.92);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
+}
+
+.panel-card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.metric {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 1.25rem;
+    padding: 1.4rem;
+}
+
+.metric span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #f8fbff;
+    margin-bottom: 0.6rem;
+}
+
+.metric p {
+    font-size: 0.98rem;
+    color: var(--text-muted);
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.section-header {
+    max-width: 780px;
+    margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    margin-top: 0.75rem;
+}
+
+.services-section .cards,
+.about-highlights,
+.split-grid,
+.contact-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.cards-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card,
+.feature-card,
+.split-card,
+.contact-card,
+.mission-panel,
+.highlight-item {
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(61, 213, 255, 0.14);
+    border-radius: 1.5rem;
+    padding: 2rem;
+}
+
+.card h3,
+.feature-card h2,
+.split-card h2,
+.highlight-item h3,
+.contact-card strong {
+    color: #f8fbff;
+}
+
+.card h3,
+.highlight-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.9rem;
+}
+
+.card p,
+.feature-card p,
+.split-card p,
+.highlight-item p {
+    margin-top: 0.9rem;
+}
+
+.feature-section {
+    padding-top: 2rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.feature-card ul,
+.split-card ul {
+    margin-top: 1.6rem;
+    list-style: none;
+    display: grid;
+    gap: 0.9rem;
+}
+
+.feature-card li,
+.split-card li {
+    position: relative;
+    padding-left: 1.4rem;
+    color: var(--text-muted);
+}
+
+.feature-card li::before,
+.split-card li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #00ffa6);
+}
+
+.feature-emphasis {
+    background: linear-gradient(180deg, rgba(6, 15, 29, 0.98), rgba(3, 9, 16, 0.92));
+    border-color: rgba(0, 255, 206, 0.22);
+}
+
+.solution-section {
+    padding: 5rem 0;
+}
+
+.split-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.about-section {
+    padding: 5rem 0;
+}
+
+.about-grid {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.about-highlights {
+    display: grid;
+    gap: 1rem;
+}
+
+.highlight-item {
+    padding: 1.75rem;
+}
+
+.highlight-item h3 {
+    margin-bottom: 0.8rem;
+}
+
+.contact-section {
+    padding: 5rem 0 4rem;
+}
+
+.contact-grid {
+    grid-template-columns: 1.4fr 0.9fr;
+    align-items: center;
+}
+
+.contact-card {
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-card a {
+    color: var(--accent);
+    font-weight: 700;
+    word-break: break-all;
+}
+
+.site-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem 0 3rem;
+    color: #7e96b7;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-inner p {
+    font-size: 0.95rem;
+}
+
+@media (max-width: 960px) {
+    .hero-grid,
+    .feature-grid,
+    .split-grid,
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-menu {
+        justify-content: flex-end;
+    }
+
+    .metrics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .hero {
+        padding-top: 4rem;
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 520px) {
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .button,
+    .btn {
+        padding: 0.95rem 1.25rem;
+    }
+}
